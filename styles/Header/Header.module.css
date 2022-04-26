@@ -1,0 +1,87 @@
+.header {
+  height: 718px;
+}
+
+.header .hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.header .hero .grid {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "slogan hero_image" "advertise hero_image";
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media only screen and (max-width: 992px) {
+  .header .hero .grid {
+        grid-template-areas: "advertise" "hero_image" "slogan";
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.header .hero .slogan {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: slogan;
+  width: 100%;
+  max-width: 40rem;
+}
+
+.header .hero .slogan h1 {
+  color: var(--primary-color);
+  font-size: var(--header-title);
+  max-width: 40rem;
+}
+
+.header .hero .slogan p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: var(--black-color);
+}
+
+.header .hero .advertise {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: advertise;
+  margin-top: 2rem;
+}
+
+.header .hero .advertise p {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.header .hero .advertise .email_input {
+  max-width: 40rem;
+  width: 20rem;
+  margin-top: 1rem;
+}
+
+.header .hero .hero_image {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: hero_image;
+  width: 253px;
+  -webkit-filter: drop-shadow(20px 20px 30px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(20px 20px 30px rgba(0, 0, 0, 0.5));
+}
+/*# sourceMappingURL=Header.module.css.map */
