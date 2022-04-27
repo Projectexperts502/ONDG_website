@@ -19,10 +19,12 @@ function Header() {
               <div className={styles.notify}>
               <p>Want to be notified on launch?</p>
               <div className={styles.email_input}>
-                <div className="input">
+                <div className={`input ${styles.input}`}>
                   <input placeholder="What's your email?" type="email"/>
                   <IoMailOutline size={18} color="var(--black-color)" className={styles.email_icon} />
+                  
                 </div>
+                <button className="button">Send</button>
               </div>
               </div>
 
