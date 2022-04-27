@@ -74,6 +74,31 @@ input:focus {
   outline: none;
 }
 
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 5.5rem;
+}
+
+.direction {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media only screen and (max-width: 992px) {
+  .direction {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+main {
+  padding: 7rem 10px;
+}
+
 .center_this {
   position: absolute;
   top: 50%;

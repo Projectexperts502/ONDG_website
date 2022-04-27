@@ -69,6 +69,20 @@ img {
 input:focus{
     outline: none;
 }
+.row{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 5.5rem;
+}
+.direction{
+    flex-direction: row;
+
+    @media only screen and (max-width: 992px) {
+        flex-direction: column-reverse;
+    }
+}
+main{
+    padding: 7rem 10px;
+}
 .center_this{
     position: absolute;
     top: 50%;
