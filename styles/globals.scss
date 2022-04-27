@@ -69,6 +69,12 @@ img {
 input:focus{
     outline: none;
 }
+.center_this{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
 .input{
     display: flex;
     position: relative;
