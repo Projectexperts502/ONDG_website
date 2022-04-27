@@ -10,7 +10,7 @@ function Navbar() {
         <div className="container">
           <div className={styles.inner}>
             <div className={styles.logo}>
-              <img src="/images/ondg_logo_white.png" />
+              <img src="/images/ondg_logo_transparent.png" />
             </div>
 
             <div

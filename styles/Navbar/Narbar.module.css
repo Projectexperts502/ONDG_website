@@ -10,11 +10,29 @@
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .D_navbar .inner {
+    padding: 0 10px;
+  }
 }
 
 .D_navbar .inner .logo {
-  width: 8rem;
+  width: 5.2rem;
   height: auto;
+  border: 1px solid var(--grey-color);
+  border-radius: 50px;
+  background: var(--primary-color);
+  overflow: hidden;
+}
+
+.D_navbar .inner .logo img {
+  border: 1px solid;
+  border-radius: 50px;
+  -webkit-transform: scale(1.5) translateY(-3px);
+          transform: scale(1.5) translateY(-3px);
 }
 
 .D_navbar .inner .links {
@@ -131,8 +149,8 @@
   height: 21px;
   width: 32px;
   position: absolute;
-  top: 29px;
-  right: 15px;
+  top: 23px;
+  right: 10px;
   z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
