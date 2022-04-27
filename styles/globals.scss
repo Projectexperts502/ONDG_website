@@ -66,6 +66,9 @@ img {
   height: 100%;
   object-fit: cover;
 }
+input:focus{
+    outline: none;
+}
 .input{
     display: flex;
     position: relative;
