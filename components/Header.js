@@ -10,8 +10,7 @@ function Header() {
             <div className={styles.slogan}>
               <h1>Groceries Household items</h1>
               <p>
-                Delivery from your all favorite supermarkets, mini markets and
-                convenience stores
+              “Delivering customers joy, saving customers money and time”
               </p>
             </div>
 
