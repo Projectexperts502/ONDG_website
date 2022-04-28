@@ -1,8 +1,10 @@
 import styles from "../styles/Navbar/Narbar.module.css";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 function Navbar() {
   const [openNav, setOpenNav] = useState(false);
+  const router = useRouter();
 
   return (
     <>
@@ -19,9 +21,9 @@ function Navbar() {
               }
             >
               <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
+                <li onClick={() => router.push('/')}>Home</li>
+                <li onClick={() => router.push('/about')}>About</li>
+                <li onClick={() => router.push('/contact')}>Contact</li>
               </ul>
             </div>
 
