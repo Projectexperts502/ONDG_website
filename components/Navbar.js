@@ -30,7 +30,7 @@ function Navbar() {
             {/* HAMBURGER */}
             <div class={styles.hamburger} onClick={() => setOpenNav(!openNav)}>
               <input class={styles.checkbox} type="checkbox" />
-              <div class={styles.hamburger_lines}>
+              <div class={openNav ? `${styles.hamburger_lines} ${styles.active}` : `${styles.hamburger_lines}`}>
                 <span class={`${styles.line} ${styles.line1}`}></span>
                 <span class={`${styles.line} ${styles.line2}`}></span>
                 <span class={`${styles.line} ${styles.line3}`}></span>

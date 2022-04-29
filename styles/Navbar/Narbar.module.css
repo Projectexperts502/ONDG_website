@@ -200,28 +200,23 @@
   transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
 }
 
-.D_navbar .inner .hamburger .checkbox[type="checkbox"]:checked ~ .hamburger_lines {
+.D_navbar .inner .hamburger .hamburger_lines.active {
   right: 5px;
   -webkit-transition: right 0.4s ease-in-out;
   transition: right 0.4s ease-in-out;
 }
 
-.D_navbar .inner .hamburger .checkbox[type="checkbox"]:checked ~ .menu-items {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-
-.D_navbar .inner .hamburger .checkbox[type="checkbox"]:checked ~ .hamburger_lines .line1 {
+.D_navbar .inner .hamburger .hamburger_lines.active .line1 {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.D_navbar .inner .hamburger .checkbox[type="checkbox"]:checked ~ .hamburger_lines .line2 {
+.D_navbar .inner .hamburger .hamburger_lines.active .line2 {
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
 }
 
-.D_navbar .inner .hamburger .checkbox[type="checkbox"]:checked ~ .hamburger_lines .line3 {
+.D_navbar .inner .hamburger .hamburger_lines.active .line3 {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
