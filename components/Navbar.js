@@ -21,9 +21,9 @@ function Navbar() {
               }
             >
               <ul>
-                <li onClick={() => router.push('/')}>Home</li>
-                <li onClick={() => router.push('/about')}>About</li>
-                <li onClick={() => router.push('/contact')}>Contact</li>
+                <li onClick={() => router.push('/') && setOpenNav(!openNav)}>Home</li>
+                <li onClick={() => router.push('/about') && setOpenNav(!openNav)}>About</li>
+                <li onClick={() => router.push('/contact') && setOpenNav(!openNav)}>Contact</li>
               </ul>
             </div>
 
