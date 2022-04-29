@@ -1,7 +1,54 @@
 import styles from "../styles/Header/Header.module.css";
 import { IoMailOutline } from "react-icons/io5";
+import { useState } from "react";
 
 function Header() {
+  const [data, setData] = useState({
+    email: "",
+    error: null,
+    loading: false,
+  });
+  const {email, error, loading } = data;
+
+  const handleChange = (e) => {
+    setData({ ...data, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setData({ ...data, error: null, loading: true });
+    if (!email) {
+      setData({ ...data, error: "Email are Requried" });
+    }
+    if (email) {
+      try {
+      
+        fetch('/api/homeEmail', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json, text/plain, */*',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        }).then((res) => {
+          console.log('Response received')
+          if (res.status === 200) {
+            console.log('Response succeeded!')
+            setData({
+              email: "",
+              error: null,
+              loading: false,
+            });
+           
+          }
+        })
+        
+      } catch (err) {
+        setData({ ...data, error: err.message, loading: false });
+      }
+    }
+  };
+
   return (
     <>
       <header className={styles.header}>
@@ -19,11 +66,26 @@ function Header() {
               <p>Want to be notified on launch?</p>
               <form className={styles.email_input}>
                 <div className={`input ${styles.input}`}>
-                  <input placeholder="What's your email?" type="email"/>
+                  <input placeholder="What's your email?" type="email" name="email" value={email} onChange={handleChange}/>
                   <IoMailOutline size={18} color="var(--black-color)" className={styles.email_icon} />
                   
                 </div>
-                <button className="button">Send</button>
+                
+                <button className="button" type="submit" disabled={loading} onClick={(e)=> handleSubmit(e)}>{loading ? "Sending..." : "Send"}</button>
+                {error ? (
+                      <p
+                        style={{
+                          color: "red",
+                          fontWeight: "bold",
+                          textAlign: "center",
+                          position:"absolute",
+                          marginTop:"60px",
+                          marginLeft:"10px"
+                        }}
+                      >
+                        {error}
+                      </p>
+                    ) : null}
               </form>
               </div>
 
