@@ -80,7 +80,7 @@ function ContactUs() {
                     </div>
 
                     <div className={`input ${styles.form_input}`}>
-                      <input placeholder="Your Email" type="email" name="email"value={email}  onChange={handleChange} />
+                      <input placeholder="Your Email" type="email" name="email" value={email}  onChange={handleChange} />
                       <IoMailOutline
                         size={18}
                         color="var(--black-color)"
